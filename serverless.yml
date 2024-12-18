@@ -1,0 +1,40 @@
+service: easyreserves-front  # Nombre de tu aplicación
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+  region: us-east-1
+  stage: dev
+
+plugins:
+  - serverless-finch
+  - serverless-offline  # Agrega este plugin para trabajar localmente
+
+custom:
+  client:
+    bucketName: easyreserves-col
+  finch:
+    bucketName: ${self:custom.client.bucketName}
+    cloudFront:
+      enabled: true
+      defaultRootObject: index.html
+    staticFolder: ./public
+    logging: true
+
+resources:
+  Resources:
+    MyS3Bucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: ${self:custom.client.bucketName}
+        WebsiteConfiguration:
+          IndexDocument: index.html
+          ErrorDocument: error.html
+        PublicAccessBlockConfiguration:
+          BlockPublicAcls: false
+          IgnorePublicAcls: false
+          BlockPublicPolicy: false
+          RestrictPublicBuckets: false
+        OwnershipControls:
+          Rules:
+            - ObjectOwnership: BucketOwnerEnforced

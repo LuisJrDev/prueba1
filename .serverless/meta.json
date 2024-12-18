@@ -1,0 +1,377 @@
+{
+  "C:\\Users\\LUIS\\Documents\\Frontend\\easyreserves-frontend": {
+    "versionSfCore": null,
+    "versionFramework": "4.4.16",
+    "isWithinCompose": false,
+    "isCompose": false,
+    "composeOrgName": null,
+    "composeResolverProviders": {
+      "default-aws-credential-resolver": "<REDACTED>",
+      "self": {
+        "instance": {
+          "credentials": "<REDACTED>",
+          "serviceConfigFile": {
+            "service": "easyreserves-front",
+            "provider": {
+              "name": "aws",
+              "runtime": "nodejs16.x",
+              "region": "us-east-1",
+              "stage": "dev",
+              "versionFunctions": true,
+              "compiledCloudFormationTemplate": {
+                "AWSTemplateFormatVersion": "2010-09-09",
+                "Description": "The AWS CloudFormation template for this Serverless application",
+                "Resources": {
+                  "MyS3Bucket": {
+                    "Type": "AWS::S3::Bucket",
+                    "Properties": {
+                      "BucketName": "easyreserves-col",
+                      "WebsiteConfiguration": {
+                        "IndexDocument": "index.html",
+                        "ErrorDocument": "error.html"
+                      },
+                      "PublicAccessBlockConfiguration": {
+                        "BlockPublicAcls": false,
+                        "IgnorePublicAcls": false,
+                        "BlockPublicPolicy": false,
+                        "RestrictPublicBuckets": false
+                      },
+                      "OwnershipControls": {
+                        "Rules": [
+                          {
+                            "ObjectOwnership": "BucketOwnerEnforced"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                },
+                "Outputs": {
+                  "ServerlessDeploymentBucketName": {
+                    "Value": "serverless-framework-deployments-us-east-1-8655b89e-0a85",
+                    "Export": {
+                      "Name": "sls-easyreserves-front-dev-ServerlessDeploymentBucketName"
+                    }
+                  }
+                }
+              }
+            },
+            "plugins": [
+              "serverless-finch",
+              "serverless-offline"
+            ],
+            "custom": {
+              "client": {
+                "bucketName": "easyreserves-col"
+              },
+              "finch": {
+                "bucketName": "easyreserves-col",
+                "cloudFront": {
+                  "enabled": true,
+                  "defaultRootObject": "index.html"
+                },
+                "staticFolder": "./public",
+                "logging": true
+              }
+            },
+            "resources": {
+              "Resources": {
+                "MyS3Bucket": {
+                  "Type": "AWS::S3::Bucket",
+                  "Properties": {
+                    "BucketName": "easyreserves-col",
+                    "WebsiteConfiguration": {
+                      "IndexDocument": "index.html",
+                      "ErrorDocument": "error.html"
+                    },
+                    "PublicAccessBlockConfiguration": {
+                      "BlockPublicAcls": false,
+                      "IgnorePublicAcls": false,
+                      "BlockPublicPolicy": false,
+                      "RestrictPublicBuckets": false
+                    },
+                    "OwnershipControls": {
+                      "Rules": [
+                        {
+                          "ObjectOwnership": "BucketOwnerEnforced"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "Outputs": {}
+            }
+          },
+          "configFileDirPath": "C:\\Users\\LUIS\\Documents\\Frontend\\easyreserves-frontend",
+          "config": {
+            "type": "self"
+          },
+          "options": {},
+          "stage": "dev",
+          "dashboard": null,
+          "logger": {
+            "namespace": "s:core:resolver:self",
+            "prefix": null,
+            "prefixColor": null
+          },
+          "_credentialsPromise": "<REDACTED>"
+        },
+        "resolvers": {}
+      },
+      "sls": {
+        "instance": {
+          "credentials": "<REDACTED>",
+          "serviceConfigFile": {
+            "service": "easyreserves-front",
+            "provider": {
+              "name": "aws",
+              "runtime": "nodejs16.x",
+              "region": "us-east-1",
+              "stage": "dev",
+              "versionFunctions": true,
+              "compiledCloudFormationTemplate": {
+                "AWSTemplateFormatVersion": "2010-09-09",
+                "Description": "The AWS CloudFormation template for this Serverless application",
+                "Resources": {
+                  "MyS3Bucket": {
+                    "Type": "AWS::S3::Bucket",
+                    "Properties": {
+                      "BucketName": "easyreserves-col",
+                      "WebsiteConfiguration": {
+                        "IndexDocument": "index.html",
+                        "ErrorDocument": "error.html"
+                      },
+                      "PublicAccessBlockConfiguration": {
+                        "BlockPublicAcls": false,
+                        "IgnorePublicAcls": false,
+                        "BlockPublicPolicy": false,
+                        "RestrictPublicBuckets": false
+                      },
+                      "OwnershipControls": {
+                        "Rules": [
+                          {
+                            "ObjectOwnership": "BucketOwnerEnforced"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                },
+                "Outputs": {
+                  "ServerlessDeploymentBucketName": {
+                    "Value": "serverless-framework-deployments-us-east-1-8655b89e-0a85",
+                    "Export": {
+                      "Name": "sls-easyreserves-front-dev-ServerlessDeploymentBucketName"
+                    }
+                  }
+                }
+              }
+            },
+            "plugins": [
+              "serverless-finch",
+              "serverless-offline"
+            ],
+            "custom": {
+              "client": {
+                "bucketName": "easyreserves-col"
+              },
+              "finch": {
+                "bucketName": "easyreserves-col",
+                "cloudFront": {
+                  "enabled": true,
+                  "defaultRootObject": "index.html"
+                },
+                "staticFolder": "./public",
+                "logging": true
+              }
+            },
+            "resources": {
+              "Resources": {
+                "MyS3Bucket": {
+                  "Type": "AWS::S3::Bucket",
+                  "Properties": {
+                    "BucketName": "easyreserves-col",
+                    "WebsiteConfiguration": {
+                      "IndexDocument": "index.html",
+                      "ErrorDocument": "error.html"
+                    },
+                    "PublicAccessBlockConfiguration": {
+                      "BlockPublicAcls": false,
+                      "IgnorePublicAcls": false,
+                      "BlockPublicPolicy": false,
+                      "RestrictPublicBuckets": false
+                    },
+                    "OwnershipControls": {
+                      "Rules": [
+                        {
+                          "ObjectOwnership": "BucketOwnerEnforced"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "Outputs": {}
+            }
+          },
+          "configFileDirPath": "C:\\Users\\LUIS\\Documents\\Frontend\\easyreserves-frontend",
+          "config": {
+            "type": "sls"
+          },
+          "options": {},
+          "stage": "dev",
+          "dashboard": null,
+          "logger": {
+            "namespace": "s:core:resolver:sls",
+            "prefix": null,
+            "prefixColor": null
+          },
+          "_credentialsPromise": "<REDACTED>"
+        },
+        "resolvers": {}
+      }
+    },
+    "composeServiceName": null,
+    "servicePath": "C:\\Users\\LUIS\\Documents\\Frontend\\easyreserves-frontend",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "service": "easyreserves-front",
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs16.x",
+        "region": "us-east-1",
+        "stage": "dev",
+        "versionFunctions": true,
+        "compiledCloudFormationTemplate": {
+          "AWSTemplateFormatVersion": "2010-09-09",
+          "Description": "The AWS CloudFormation template for this Serverless application",
+          "Resources": {
+            "MyS3Bucket": {
+              "Type": "AWS::S3::Bucket",
+              "Properties": {
+                "BucketName": "easyreserves-col",
+                "WebsiteConfiguration": {
+                  "IndexDocument": "index.html",
+                  "ErrorDocument": "error.html"
+                },
+                "PublicAccessBlockConfiguration": {
+                  "BlockPublicAcls": false,
+                  "IgnorePublicAcls": false,
+                  "BlockPublicPolicy": false,
+                  "RestrictPublicBuckets": false
+                },
+                "OwnershipControls": {
+                  "Rules": [
+                    {
+                      "ObjectOwnership": "BucketOwnerEnforced"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Outputs": {
+            "ServerlessDeploymentBucketName": {
+              "Value": "serverless-framework-deployments-us-east-1-8655b89e-0a85",
+              "Export": {
+                "Name": "sls-easyreserves-front-dev-ServerlessDeploymentBucketName"
+              }
+            }
+          }
+        }
+      },
+      "plugins": [
+        "serverless-finch",
+        "serverless-offline"
+      ],
+      "custom": {
+        "client": {
+          "bucketName": "easyreserves-col"
+        },
+        "finch": {
+          "bucketName": "easyreserves-col",
+          "cloudFront": {
+            "enabled": true,
+            "defaultRootObject": "index.html"
+          },
+          "staticFolder": "./public",
+          "logging": true
+        }
+      },
+      "resources": {
+        "Resources": {
+          "MyS3Bucket": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+              "BucketName": "easyreserves-col",
+              "WebsiteConfiguration": {
+                "IndexDocument": "index.html",
+                "ErrorDocument": "error.html"
+              },
+              "PublicAccessBlockConfiguration": {
+                "BlockPublicAcls": false,
+                "IgnorePublicAcls": false,
+                "BlockPublicPolicy": false,
+                "RestrictPublicBuckets": false
+              },
+              "OwnershipControls": {
+                "Rules": [
+                  {
+                    "ObjectOwnership": "BucketOwnerEnforced"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "Outputs": {}
+      }
+    },
+    "serviceRawFile": "service: easyreserves-front  # Nombre de tu aplicación\n\nprovider:\n  name: aws\n  runtime: nodejs16.x\n  region: us-east-1\n  stage: dev\n\nplugins:\n  - serverless-finch\n  - serverless-offline  # Agrega este plugin para trabajar localmente\n\ncustom:\n  client:\n    bucketName: easyreserves-col\n  finch:\n    bucketName: ${self:custom.client.bucketName}\n    cloudFront:\n      enabled: true\n      defaultRootObject: index.html\n    staticFolder: ./public\n    logging: true\n\nresources:\n  Resources:\n    MyS3Bucket:\n      Type: AWS::S3::Bucket\n      Properties:\n        BucketName: ${self:custom.client.bucketName}\n        WebsiteConfiguration:\n          IndexDocument: index.html\n          ErrorDocument: error.html\n        PublicAccessBlockConfiguration:\n          BlockPublicAcls: false\n          IgnorePublicAcls: false\n          BlockPublicPolicy: false\n          RestrictPublicBuckets: false\n        OwnershipControls:\n          Rules:\n            - ObjectOwnership: BucketOwnerEnforced\n",
+    "command": [
+      "deploy"
+    ],
+    "options": {},
+    "error": null,
+    "params": {},
+    "machineId": "8c77785a5757662ee2cec1758f641df2",
+    "stage": "dev",
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "072da799-5b40-404f-9dca-0f549207b14d",
+    "orgName": "luislemus",
+    "userId": "pXRs12DL2XG0SRTBWg",
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "userName": "luislemus",
+    "subscription": null,
+    "userEmail": "Luislemus0109@gmail.com",
+    "serviceProviderAwsRegion": "us-east-1",
+    "serviceProviderAwsCredentials": "<REDACTED>",
+    "serviceProviderAwsAccountId": "590183865524",
+    "projectType": "traditional",
+    "versionSf": "4.4.16",
+    "serviceProviderAwsCfStackName": "easyreserves-front-dev",
+    "integrations": {},
+    "serviceUniqueId": "arn:aws:cloudformation:us-east-1:590183865524:stack/easyreserves-front-dev/645fe400-bc31-11ef-9f4c-0ea151c2cfe3",
+    "serviceProviderAwsCfStackId": "arn:aws:cloudformation:us-east-1:590183865524:stack/easyreserves-front-dev/645fe400-bc31-11ef-9f4c-0ea151c2cfe3",
+    "serviceProviderAwsCfStackCreated": "2024-12-17T04:42:59.659Z",
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": "CREATE_COMPLETE",
+    "serviceProviderAwsCfStackOutputs": [
+      {
+        "OutputKey": "ServerlessDeploymentBucketName",
+        "OutputValue": "serverless-framework-deployments-us-east-1-8655b89e-0a85",
+        "ExportName": "sls-easyreserves-front-dev-ServerlessDeploymentBucketName"
+      }
+    ]
+  }
+}
